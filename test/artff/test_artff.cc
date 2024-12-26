@@ -6,7 +6,8 @@ class MyFilter : public artff::AbstractFilter {
 private:
   void AsyncProcessTransformedBlock(std::vector<std::complex<float> *> data,
                                     uint32_t size) override {
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    //std::this_thread::sleep_for(std::chrono::seconds(1));
+    sleep(1000);
   }
 };
 
